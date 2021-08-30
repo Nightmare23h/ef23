@@ -7,14 +7,13 @@
 function getHypotenuse(a, b) {
 	return (a*a + b*b) ** 0.5
 }
-const c = getHypotenuse(3, 4)  // c is now: 5
+const hypot = getHypotenuse(3, 4)  // c is now: 5
 
 
 
 // convert to seconds
 function getSeconds(hours, minutes, seconds) {
-	//@TODO
-	return 
+	return hours*3600 + minutes*60 + seconds
 }
 const oneLesson = getSeconds(0, 45, 0) // should return 2700
 
@@ -23,7 +22,7 @@ const oneLesson = getSeconds(0, 45, 0) // should return 2700
 //Create HTML heading tag
 function createHeading(text) {
 	//@TODO
-	return 
+	return "<h1>"+text+"</h1>"
 }
 const heading = createHeading("Welcome") // should return "<h1>Welcome</h1>"
 
@@ -32,7 +31,8 @@ const heading = createHeading("Welcome") // should return "<h1>Welcome</h1>"
 //Create SVG rect
 function createSvgRect(x, y, w, h) {
 	//@TODO
-	return 
+	return "<rect x='"`${x}`"' y='"`${y}`"' width='"`${w}`"' height='"`${h}`"'></rect>"
+
 }
 const svgRect = createSvgRect(100, 200, 300, 400) // should return "<rect x='100' y='200' width='300' height='400'></rect>"
 
