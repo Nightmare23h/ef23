@@ -31,7 +31,7 @@ const heading = createHeading("Welcome") // should return "<h1>Welcome</h1>"
 //Create SVG rect
 function createSvgRect(x, y, w, h) {
 	//@TODO
-	return "<rect x='"`${x}`"' y='"`${y}`"' width='"`${w}`"' height='"`${h}`"'></rect>"
+	
 
 }
 const svgRect = createSvgRect(100, 200, 300, 400) // should return "<rect x='100' y='200' width='300' height='400'></rect>"

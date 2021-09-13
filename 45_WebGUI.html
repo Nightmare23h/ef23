@@ -24,6 +24,17 @@
 		</div>
 	</div>
 
+	<div class="time">
+		<h2>Get Time</h2>
+		<div>
+			<input class="hours" placeholder="hours" type="number">
+			<input class="minutes" placeholder="minutes" type="number">
+			<input class="seconds" placeholder="seconds" type="number">
+			<button>Get Time</button>
+			<div class="output">&nbsp;</div>
+		</div>
+	</div>
+
 
 	<script>
 
@@ -37,6 +48,24 @@
 			const b = Number(document.querySelector(".hypotenuse input.b").value)
 			const c = getHypotenuse(a, b)
 			hypotenuseOutput.textContent = c
+		}
+
+
+	</script>
+
+	<script>
+
+		const timeButton = document.querySelector(".time button")
+		const timeOutput = document.querySelector(".time .output")
+
+		timeButton.addEventListener("click", showHypotenuse)
+
+		function showHypotenuse() {
+			const hours = Number(document.querySelector(".time input.hours").value)
+			const minutes = Number(document.querySelector(".time input.minutes").value)
+			const seconds = Number(document.querySelector(".time input.seconds").value)
+			const seconds2 = getSeconds(hours, minutes, seconds)
+			timeOutput.textContent = seconds2
 		}
 
 
